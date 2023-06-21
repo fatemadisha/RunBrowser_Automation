@@ -13,7 +13,7 @@ public class FirstRun extends BaseDriver {
 		
 		Thread.sleep(5000);
 		
-		System.out.println(driver.getTitle());
+		//System.out.println(driver.getTitle());
 		}
 
 }

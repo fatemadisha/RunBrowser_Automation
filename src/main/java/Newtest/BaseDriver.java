@@ -17,7 +17,7 @@ public class BaseDriver {
 	@BeforeSuite
 	// this annotation will be called first.
 	public void start() {
-		String browser = System.getProperty("browser", "chrome");
+		String browser = System.getProperty("browser", "");
 		
 		if(browser.contains("chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -43,6 +43,9 @@ public class BaseDriver {
 // this method will closed by this annotation
  public void close() {
 	 driver.close();
+	 
+	 //for closing a specific tab we use close() method.
+	 //for closing the whole browser we use quit() method. 
  }
 }
 
