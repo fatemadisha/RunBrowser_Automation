@@ -17,7 +17,7 @@ public class BaseDriver {
 	@BeforeSuite
 	// this annotation will be called first.
 	public void start() {
-		String browser = System.getProperty("browser", "");
+		String browser = System.getProperty("browser", "chrome");
 		
 		if(browser.contains("chrome")) {
 			WebDriverManager.chromedriver().setup();
